@@ -1,0 +1,119 @@
+.container {
+     display: flex;
+     height: 100vh;
+}
+
+.action_button {
+     border: 1px solid #c1ece4;
+     padding: 25px;
+     display: flex;
+     justify-content: space-around;
+     background: #1e2228;
+     align-items: center;
+}
+
+.action_button>select {
+     background: #c1ece4;
+     width: 10rem;
+     height: 2rem;
+     font-size: 17px;
+     border-radius: 5px;
+     cursor: pointer;
+}
+
+.action_button>button {
+     background: #c1ece4;
+     height: 2.5rem;
+     width: 8rem;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: 700;
+     font-size: 14px;
+}
+
+.left-section {
+     flex: 1;
+     background-color: #2b2b2b;
+     color: #ffffff;
+     padding: 20px;
+}
+
+.left-section textarea {
+     width: 80%;
+     height: calc(100% - 30px);
+     background-color: transparent;
+     border: none;
+     resize: none;
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 16px;
+     line-height: 1.5;
+     padding: 10px;
+     color: #ffffff;
+}
+
+.left-section button {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     margin-top: 10px;
+     font-size: 16px;
+     background-color: #ffffff;
+     color: #2b2b2b;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+
+.left-section button:hover {
+     background-color: #dddddd;
+}
+
+.right-section {
+     flex: 1;
+     background-color: #282c34;
+     padding: 20px;
+     height: auto;
+}
+
+
+
+.left-section textarea,
+.right-section pre {
+     border: none;
+     box-sizing: border-box;
+     width: 100%;
+     height: 100vh;
+     outline: none;
+}
+
+.left-section textarea::placeholder,
+.right-section pre::placeholder {
+     color: #ffffff;
+}
+
+.left-section textarea:focus,
+.right-section pre:focus {
+     border: 1px solid #92e7e0;
+}
+
+.right-section {
+     flex: 1;
+     background-color: #282c34;
+     padding: 20px;
+     overflow: hidden;
+     color: white;
+     border: 1px solid #c1ece4;
+}
+
+.right-section>div>pre {
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 16px;
+     line-height: 1.5;
+     padding: 10px;
+     margin: 0;
+     max-height: 150vh ;
+     overflow: auto;
+     scroll-behavior: smooth;
+     /* white-space: pre-wrap; */
+}
