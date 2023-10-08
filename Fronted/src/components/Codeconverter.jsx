@@ -12,38 +12,44 @@ function Codeconverter() {
   const [isLoading2, setIsLoading2] = useState(false);
 
   const handleConvert = async () => {
-    setIsLoading(true); 
+    setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:8080/convert", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code, language }),
-      });
+      const response = await fetch(
+        "https://codeconverter-6cx5.onrender.com/convert",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code, language }),
+        }
+      );
 
       const data = await response.json();
       setConvertedCode(data.convertedCode);
     } catch (error) {
       console.error("Error converting code:", error);
     } finally {
-      setIsLoading(false); 
+      setIsLoading(false);
     }
   };
 
   const handleDebug = async () => {
     setIsLoading1(true);
     try {
-     const response = await fetch("http://localhost:8080/debug", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify({ code, language }),
-     });
+      const response = await fetch(
+        "https://codeconverter-6cx5.onrender.com/debug",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code, language }),
+        }
+      );
 
-     const data = await response.json();
-     setConvertedCode(data.convertedCode);
+      const data = await response.json();
+      setConvertedCode(data.convertedCode);
     } catch (error) {
       console.error("Error during debugging:", error);
     } finally {
@@ -52,16 +58,18 @@ function Codeconverter() {
   };
 
   const handleCheck = async () => {
-
     setIsLoading2(true);
     try {
-      const response = await fetch("http://localhost:8080/check", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code, language }),
-      });
+      const response = await fetch(
+        "https://codeconverter-6cx5.onrender.com/check",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code, language }),
+        }
+      );
 
       const data = await response.json();
       setConvertedCode(data.convertedCode);
@@ -105,11 +113,9 @@ function Codeconverter() {
                 basic: true,
                 snippets: true,
               },
-             
             }}
             onChange={(e) => setCode(e)}
           />
-         
         </div>
 
         <div className="right-section">
