@@ -32,7 +32,7 @@ app.post("/convert", async (req, res) => {
                {
                     headers: {
                          "Content-Type": "application/json",
-                         Authorization: `Bearer ${API_KEY}`,
+                         Authorization: `Bearer ${process.env.API_KEY}`,
                     },
                }
           );
@@ -68,7 +68,7 @@ app.post("/debug", async (req, res) => {
                {
                     headers: {
                          "Content-Type": "application/json",
-                         Authorization: `Bearer ${API_KEY}`,
+                         Authorization: `Bearer ${process.env.API_KEY}`,
                     },
                }
           );
@@ -118,7 +118,7 @@ app.post("/check", async (req, res) => {
                {
                     headers: {
                          "Content-Type": "application/json",
-                         Authorization: `Bearer ${API_KEY}`,
+                         Authorization: `Bearer ${process.env.API_KEY}`,
                     },
                }
           );
